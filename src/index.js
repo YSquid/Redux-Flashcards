@@ -5,6 +5,7 @@ import App from "./app/App";
 import store from "./app/store";
 
 //comments in the index file to test some git stuff
+//more comments 
 
 ReactDOM.render(
   <React.StrictMode>
