@@ -5,26 +5,23 @@ const initialState = {
 };
 
 export const topicsSlice = createSlice({
-  name: 'topics',
-  //this right?
+  name: "topics",
   initialState: initialState,
   reducers: {
     addTopic: {
       reducer: (state, action) => {
-        const {id, name, icon} = action.payload
+        const { id, name, icon } = action.payload;
         state.topics[id] = {
           id: id,
           name: name,
           icon: icon,
-          quizIds: [],
-        }
-
-        }
+          quizIds: []
+        };
       }
     }
   }
-)
+});
 
-export const selectTopics = (state) => state.topics.topics
-export const {addTopic} = topicsSlice.actions
-export default topicsSlice.reducer
+export const selectTopics = (state) => state.topics.topics;
+export const { addTopic } = topicsSlice.actions;
+export default topicsSlice.reducer;
